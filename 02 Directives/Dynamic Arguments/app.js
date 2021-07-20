@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            attributeName: "href",
+            attributename: "href",
             url: "www.google.com"
         }
     }

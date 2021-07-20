@@ -9,8 +9,12 @@
 
 <body>
     <div id="app">
-        <!-- here you can pass an argument in square brackets after the colon, attributName is a property which value is set to "href"  -->
-        <p>Here is Dynamic Binding <a v-bind:[attributename]="url">URL</a></p>
+        <!-- Full syntax -->
+        <p v-bind:id="value">Full syntax binding</p>
+        <!-- Short hand -->
+        <p :id="value">Short hand binding</p>
+        <!-- Short hand with dynamic argumrents -->
+        <p :[attributename]="value">Short hand with dynamic argumrents</p>
     </div>
 </body>
 <script src="https://unpkg.com/vue@next"></script>
