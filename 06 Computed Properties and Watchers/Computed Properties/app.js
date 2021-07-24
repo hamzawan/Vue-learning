@@ -1,7 +1,11 @@
 const app = Vue.createApp({
     data() {
         return {
-            counter: 0
+            counter: 0,
+            inputValue: '',
+            firstName: '',
+            lastName: 'Hamza',
+            fullName: ''
         }
     },
 
@@ -26,7 +30,23 @@ const app = Vue.createApp({
         },
         decrementCount() {
             this.counter -= 1;
+        },
+        getValue() {
+            this.firstName = this.inputValue;
+        },
+
+        //This will execute every time when any property gets update
+        checkfullName() {
+            console.log("Running");
+            if (this.firstName != '') {
+                this.fullName = this.firstName + ' ' + this.lastName
+            }
+            else {
+                this.fullName = '';
+            }
+            return this.fullName;
         }
+
     }
 });
 

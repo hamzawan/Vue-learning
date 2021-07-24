@@ -5,7 +5,7 @@ const app = Vue.createApp({
             question: ""
         }
     },
-    // Wacther can wacth any property and like data, computed properties and props. and then it will execute when property change.
+    // Wacther can wacth any property like data, computed properties and props. and then it will execute when property change.
     // it can update the property value
     // it's behaviour is async
     // it can be use to make an HTTP request.

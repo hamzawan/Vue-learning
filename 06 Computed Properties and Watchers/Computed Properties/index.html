@@ -9,6 +9,10 @@
 
 <body>
     <div id="app">
+        <input type="text" v-model="inputValue">
+        <button @click="getValue">Get value</button>
+        <!-- This will execute every time when any property gets update -->
+        <p>{{ checkfullName() }}</p>
         <h4>{{counter}}</h4>
         <p>{{ checkCounter }}</p>
         <button @click="incrementCount">Increment count</button>
