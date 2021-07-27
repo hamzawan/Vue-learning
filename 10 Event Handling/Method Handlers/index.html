@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-on also accept the name of method you'd like to call.
+        method can also accept the args.
+        Sometimes we also need to acces the origional DOM event in an inline statement handler.
+        You can pass into a method using the special $event variable. -->
+        <button @click="say('Hi', $event)">Say Hi</button>
+        <button @click="say('What', $event)">Say What</button>
+
+        <!-- Multiple Event handler -->
+
+        <!-- You can have multiple methods in event handler seprated by coma like this -->
+        <button @click="say('Hi', $event), greet('How are you?')">Say Hi and How are you?</button>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+
+</html>

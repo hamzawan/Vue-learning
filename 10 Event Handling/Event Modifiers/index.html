@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- the click event's propagation will be stopped -->
+    <a @click.stop="doThis"></a>
+
+    <!-- the submit event will no longer reload the page -->
+    <form @submit.prevent="onSubmit"></form>
+
+    <!-- modifiers can be chained -->
+    <a @click.stop.prevent="doThat"></a>
+
+    <!-- just the modifier -->
+    <form @submit.prevent></form>
+
+    <!-- use capture mode when adding the event listener -->
+    <!-- i.e. an event targeting an inner element is handled here before being handled by that element -->
+    <div @click.capture="doThis">...</div>
+
+    <!-- only trigger handler if event.target is the element itself -->
+    <!-- i.e. not from a child element -->
+    <div @click.self="doThat">...</div>
+</body>
+
+</html>

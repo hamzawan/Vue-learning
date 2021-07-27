@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div id="app">
+        <!-- When listening for keyboard events, we often needs to check for specific keys. Vue allows adding key modifier
+        for v-on or @ when listening for key events -->
+
+            <!-- Only vm.submit when the key is Enter -->
+            <input type="text" @keyup.enter="submit">
+
+        <!-- System Modifier Keys -->
+
+            <!-- Alt + Enter -->
+            <input @keyup.alt.enter="clear" />
+
+            <!-- Ctrl + Click -->
+            <div @click.ctrl="doSomething">Do something</div>
+            
+        <!-- Exact -->
+
+            <!-- this will fire even if Alt or Shift is also pressed -->
+            <button @click.ctrl="onClick">A</button>
+
+            <!-- this will only fire when Ctrl and no other keys are pressed -->
+            <button @click.ctrl.exact="onCtrlClick">A</button>
+
+            <!-- this will only fire when no system modifiers are pressed -->
+            <button @click.exact="onClick">A</button>
+    </div>
+
+</body>
+
+</html>

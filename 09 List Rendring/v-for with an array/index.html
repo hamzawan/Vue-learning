@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <!-- We can you use v-for directive to render a list of items based on an array.
+            The v-for directive requries a special sytax in the form of item in items,
+            where items is the source data array and item is an alias for the element being itrated on -->
+
+            <!-- Inside v-for block we hava full access to parent scope properties. v-for also support an optioanl
+            second argument for the indexing -->
+            <li v-for="(message, idx) in messages" key="message.id">
+                <span>{{ idx }}</span>&nbsp;
+                <span>{{ parentProperty }} </span>&nbsp;
+                <span>{{ message.message }}</span>&nbsp;
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+
+</html>
