@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="blog-post-components">
+        <div :style="{fontSize: postFontSize + 'em'}">
+            <!-- When we click on button it should communicate to the parent it should enlarge the text of all posts,
+            To solve this proble,component system provides a custom event system.The parent can choose to listen to any event
+            on the child component instance with v-on or @, just we would with a native DOM event  -->
+            <blog-post v-for="post in posts" :key="post.id" :title="post.title" @enlarge-text="onEnlargeText">
+            </blog-post>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+
+</html>
