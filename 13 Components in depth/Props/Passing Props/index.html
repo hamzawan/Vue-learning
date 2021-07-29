@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Dynamically assign the value of a variable -->
+        <blog-post :title="post.title" :content="post.content"></blog-post>
+        <!-- Passing a number dynamically which is assigned in post.likes -->
+        <blog-post :likes="post.likes"></blog-post>
+        <!-- Dynamically assign to the Boolean value of a variable. -->
+        <blog-post :is-published="post.isPublished"></blog-post>
+        <!-- Assign  Array. -->
+        <blog-post :comments-id="[25,69,78,15,554]"></blog-post>
+        <!--  Assign  Object. -->
+        <blog-post :author="{
+            author: 'Victoria',
+            company: 'TenzHub'
+        }"></blog-post>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app.js"></script>
+
+</html>
