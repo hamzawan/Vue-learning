@@ -1,26 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- To provide the content to named slot we need to use v-slot directive on a template name element,
+        provide the name of the slot as v-slot's arguments
+        Note that v-slot can only be added to a <template>
+         -->
+  <base-layout>
+    <template v-slot:header>
+      <h1>The Header</h1>
+    </template>
+    <template v-slot:default>
+      <p>Content for site</p>
+    </template>
+    <template v-slot:footer>
+      <h5>Footer content</h5>
+    </template>
+  </base-layout>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  <script>
+export default {};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
