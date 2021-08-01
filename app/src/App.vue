@@ -16,6 +16,7 @@
   </base-layout>
 
   <todo-list>
+    <!-- attribute bound to a slot element are called slot props, in this case `slotProps` but we can use any name we like.-->
     <template v-slot:default="slotProp">
       <span class="green">
         {{ slotProp.item }}
