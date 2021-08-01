@@ -14,7 +14,22 @@
       <h5>Footer content</h5>
     </template>
   </base-layout>
+
+  <todo-list>
+    <template v-slot:default="slotProp">
+      <span class="green">
+        {{ slotProp.item }}
+      </span>
+    </template>
+  </todo-list>
 </template>
   <script>
 export default {};
 </script>
+
+<style scoped>
+.green {
+  color: green;
+  font-size: 16px;
+}
+</style>
